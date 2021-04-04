@@ -1,3 +1,4 @@
+import { inject, injectable } from 'tsyringe';
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {
@@ -10,8 +11,12 @@ interface IRequest {
  * [x] - Acessar o repositorio
  */
 
+@injectable()
 class CreateCategoryUseCase {
-    constructor(private categoriesRepository: ICategoriesRepository){}
+    constructor(
+        @inject("CategoriesRepository")
+        private categoriesRepository: ICategoriesRepository
+    ){}
 
     async execute({name, description}: IRequest): Promise<void>{
         const categoryAlreadyEcists = await this.categoriesRepository.findByName(name);

@@ -1,5 +1,5 @@
-import { Category } from '../../entities/Category';
-import { ICategoriesRepository, ICreateCategoryDTO } from '../ICategoriesRepository';
+import { Category } from '../entities/Category';
+import { ICategoriesRepository, ICreateCategoryDTO } from '../../../repositories/ICategoriesRepository';
 import { getRepository, Repository } from 'typeorm';
 // singleton
 
@@ -25,7 +25,7 @@ class CategoriesRepository implements ICategoriesRepository{
         return categories;
     };
 
-    async findByName(name: string): Promise<Category>{
+    async findByName(name: string): Promise<Category | undefined>{
         const category = await this.repository.findOne({name});
         return category;
     }

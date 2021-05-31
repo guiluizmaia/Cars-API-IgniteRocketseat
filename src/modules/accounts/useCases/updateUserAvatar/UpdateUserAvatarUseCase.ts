@@ -14,7 +14,7 @@ class UpdateUserAvatarUseCase{
 
     constructor(
         @inject("usersRepository")
-        private usersRepository: IUsersRepository;
+        private usersRepository: IUsersRepository
     ){}
 
     async execute({user_id, avatar_file}: IRequest): Promise<void>{

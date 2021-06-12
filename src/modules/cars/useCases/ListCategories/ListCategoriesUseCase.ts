@@ -7,7 +7,8 @@ import { ICategoriesRepository } from '../../repositories/ICategoriesRepository'
 class ListCategoriesUseCase {
     constructor(
         @inject("CategoriesRepository")
-        private categoriesRepository: ICategoriesRepository){}
+        private categoriesRepository: ICategoriesRepository
+        ){}
 
     execute(): Promise<Category[]>{
         const categories = this.categoriesRepository.list();

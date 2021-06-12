@@ -4,7 +4,6 @@ import { getRepository, Repository } from 'typeorm';
 // singleton
 
 class CategoriesRepository implements ICategoriesRepository{
-    /** Private para só essa classe pode usar */
     private repository: Repository<Category>;
 
     constructor(){

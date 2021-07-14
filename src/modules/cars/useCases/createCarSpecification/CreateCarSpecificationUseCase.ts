@@ -1,6 +1,6 @@
 import { ICarsRepository } from "../../repositories/ICarsRepository";
 import { AppError } from "../../../../shared/errors/AppError";
-import { inject } from "tsyringe";
+import { inject, injectable } from "tsyringe";
 import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
 import { Car } from "../../infra/typeorm/entities/Car";
 
@@ -9,12 +9,13 @@ interface IRequest {
     specifications_id: string[];
 }
 
+@injectable()
 class CreateCarSpecificationUseCase{
 
     constructor(
-        //@inject("CarsRepository")
+        @inject("CarsRepository")
         private carsRepository: ICarsRepository,
-
+        @inject("SpecificationsRepository")
         private specificationsRepository: ISpecificationsRepository,
     ){}
 

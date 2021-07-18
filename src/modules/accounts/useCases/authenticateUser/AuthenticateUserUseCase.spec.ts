@@ -30,7 +30,6 @@ describe("Authenticate User", () => {
             password: user.password,
         })
 
-        console.log(result)
         expect(result).toHaveProperty("token");
     });
 

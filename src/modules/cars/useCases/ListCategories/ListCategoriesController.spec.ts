@@ -8,7 +8,7 @@ import { hash } from 'bcrypt';
 import createConnection from '../../../../shared/infra/typeorm';
 
 let connection: Connection;
-describe("Create Category Controller", async () => {
+describe("Create Category Controller",  () => {
     beforeAll(async () => {
         connection = await createConnection();
         await connection.runMigrations();
@@ -35,14 +35,14 @@ describe("Create Category Controller", async () => {
             password: 'admin',
         })
 
-        const { token } = responseToken.body;
+        const { refresh_token } = responseToken.body;
 
         await request(app).post('/categories')
         .send({
             name: "Category Supertest",
             description: "Category Supertest",
         }).set({
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${refresh_token}`,
         })
 
         const response = await request(app).get('/categories')

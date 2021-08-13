@@ -70,7 +70,7 @@ class AuthenticateUserUseCase{
             user: {
                 name: user.name,
                 email: user.email
-            }
+            },
             refresh_token
         }
 

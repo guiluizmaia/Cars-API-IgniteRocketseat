@@ -34,7 +34,7 @@ describe("Create Category", () =>{
         await createCategoryUseCase.execute({name:category.name, description: category.description});
 
         await expect(
-            createCategoryUseCase.execute({name:category.name, description: category.description});
+            createCategoryUseCase.execute({name:category.name, description: category.description})
         ).rejects.toEqual(new AppError("Category already exists!"));
 
     })

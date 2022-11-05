@@ -36,7 +36,7 @@ class User {
             case "s3":
                 return `${process.env.AWS_BUCKET_URL}/avatar/${this.avatar}`;
             default:
-                return null;
+                return 'null';
         }
     }
 

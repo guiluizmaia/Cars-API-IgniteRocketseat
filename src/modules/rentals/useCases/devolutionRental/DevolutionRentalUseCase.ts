@@ -22,6 +22,7 @@ class DevolutionRentalUseCase{
     ){}
     async execute({ id, user_id }: IRequest): Promise<Rental>{
         const rental = await this.rentalsRepository.findById(id);
+        if(!rental) throw new AppError('Rental not found')
         const car = await this.carsRepository.findById(rental.car_id);
         const minimum_daily = 1;
 

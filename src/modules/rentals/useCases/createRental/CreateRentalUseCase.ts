@@ -4,7 +4,7 @@ import { ICarsRepository } from "../../../cars/repositories/ICarsRepository";
 
 import { AppError } from "../../../../shared/errors/AppError";
 import { IDateProvider } from '../../../../shared/container/providers/DateProvider/IDateProvider';
-import { inject } from "tsyringe";
+import { inject, injectable } from "tsyringe";
 
 
 interface IRequest {
@@ -13,6 +13,7 @@ interface IRequest {
     expected_return_date: Date;
 }
 
+@injectable()
 class CreateRentalUseCase {
 
     constructor(

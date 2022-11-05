@@ -2,7 +2,7 @@ import "reflect-metadata";
 import "dotenv/config";
 import "express-async-errors";
 import cors from "cors";
-
+// import "../../../shared/infra/typeorm/seed/admin";
 import createConnection from "../typeorm";
 import "../../container/index";
 

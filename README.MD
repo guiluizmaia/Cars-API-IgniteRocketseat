@@ -1,65 +1,65 @@
-# Cadastro de carro
+# Car Registration
 
-**Requisitos Funcionais**
-Deve ser possível cadastrar um novo carro.
-Deve ser possível listar todas as categorias.
+**Functional Requirements**  
+- It should be possible to register a new car.  
+- It should be possible to list all categories.  
 
-**Requisitos Não Funcionais**
+**Non-Functional Requirements**
 
-**Regra De Negócio**
-Não deve ser possível cadastrar um carro com uma placa já existente.
-Não deve ser possível alterar a placa de um carro já cadastrado.
-O carro deve ser cadastrado com disponibilidade por padrão.
-O usuário responsável pelo cadastro deve ser um usuário administrador.
+**Business Rules**  
+- It should not be possible to register a car with an already existing license plate.  
+- It should not be possible to change the license plate of an already registered car.  
+- Cars should be registered as available by default.  
+- The user responsible for the registration must be an administrator.  
 
-# Listagem de carros
+# Car Listing
 
-**Requisitos Funcionais**
-Deve ser possível listar todos os carros disponíveis.
-Deve ser possível listar todos os carros disponíveis pelo nome da categoria.
-Deve ser possível listar todos os carros disponíveis pelo nome da marca.
-Deve ser possível listar todos os carros disponíveis pelo nome do carro.
+**Functional Requirements**  
+- It should be possible to list all available cars.  
+- It should be possible to list all available cars by category name.  
+- It should be possible to list all available cars by brand name.  
+- It should be possible to list all available cars by car name.  
 
-**Requisitos Não Funcionais**
+**Non-Functional Requirements**
 
-**Regra De Negócio**
-O usuário não precisa estar logado no sistema.
+**Business Rules**  
+- The user does not need to be logged into the system.  
 
-# Cadastro de Especificação no carro
+# Car Specification Registration
 
-**Requisitos Funcionais**
-Deve ser possível cadastrar uma especificação para um carro.
-Deve ser possível listar todas as especificações.
-Deve ser possível listar todos os carros
+**Functional Requirements**  
+- It should be possible to register a specification for a car.  
+- It should be possible to list all specifications.  
+- It should be possible to list all cars.  
 
-**Requisitos Não Funcionais**
+**Non-Functional Requirements**
 
-**Regra De Negócio**
-Não deve ser possível cadastrar uma specificação para um carro não cadastrado.
-Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.
-O usuário responsável pelo cadastro deve ser um usuário administrador.
+**Business Rules**  
+- It should not be possible to register a specification for a car that has not been registered.  
+- It should not be possible to register a specification that already exists for the same car.  
+- The user responsible for the registration must be an administrator.  
 
-# Cadastro de imagens do carro
+# Car Image Registration
 
-**Requisitos Funcionais**
-Deve ser possível cadastrar a imagem do carro.
-Deve ser possível listar todos os carro.
+**Functional Requirements**  
+- It should be possible to register an image for a car.  
+- It should be possible to list all cars.  
 
-**Requisitos Não Funcionais**
-Utilizar o multer para upload dos arquivos.
+**Non-Functional Requirements**  
+- Use Multer for file uploads.  
 
-**Regra De Negócio**
-O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
-O usuário responsável pelo cadastro deve ser um usuário administrador.
+**Business Rules**  
+- The user should be able to register more than one image for the same car.  
+- The user responsible for the registration must be an administrator.  
 
-# Aluguel de carro
+# Car Rental
 
-**Requisitos Funcionais**
-Deve ser possível cadastrar um aluguel.
+**Functional Requirements**  
+- It should be possible to register a rental.  
 
-**Requisitos Não Funcionais**
+**Non-Functional Requirements**
 
-**Regra De Negócio**
-O aluguel deve ter duração mínima de 24 horas.
-Não deve ser possível cadastrar um aluguel caso já exista um aberto para o mesmo usuário.
-Não deve ser possível cadastrar um aluguel caso já exista um aberto para o mesmo carro.
+**Business Rules**  
+- The rental period must have a minimum duration of 24 hours.  
+- It should not be possible to register a rental if there is already an open rental for the same user.  
+- It should not be possible to register a rental if there is already an open rental for the same car.  
